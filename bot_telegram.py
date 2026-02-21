@@ -5,7 +5,7 @@ from google import genai
 from PIL import Image
 import os
 from dotenv import load_dotenv
-
+## Carga de variables de .env
 load_dotenv()
 api_key = os.getenv("API_KEY_GEMINI_ID")
 token_telegram = os.getenv("TOKEN_TELEGRAM")
