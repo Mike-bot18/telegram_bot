@@ -2,3 +2,4 @@ pyTelegramBotAPI
 google-genai
 pillow
 flask
+dotenv
