@@ -1,0 +1,2 @@
+url_imagen = "https://files.worldwildlife.org/wwfcmsprod/images/Mountain_Gorilla_Silverback_WW22557/story_full_width/36fcoamev0_Mountain_Gorilla_Silverback_WW22557.jpg"
+image_caption="¡Mira, un gorila!"

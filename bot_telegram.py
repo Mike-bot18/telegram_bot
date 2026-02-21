@@ -5,6 +5,7 @@ from google import genai
 from PIL import Image
 import os
 from dotenv import load_dotenv
+from utils import url_imagen, image_caption
 ## Carga de variables de .env
 load_dotenv()
 api_key = os.getenv("API_KEY_GEMINI_ID")
@@ -23,8 +24,7 @@ print("🤖 Iniciando Súper Bot Definitivo (Ahora lee documentos)...")
 @bot.message_handler(commands=['foto'])
 def enviar_foto(mensaje):
     bot.reply_to(mensaje, "Buscando una foto genial...")
-    url_imagen = "https://www.bing.com/images/search?view=detailV2&ccid=exwQ8cEG&id=A21991CBC3817719EB76E5BC82944597C6840C83&thid=OIP.exwQ8cEG8zKeF_GwlZD6AAHaFj&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.7b1c10f1c106f3329e17f1b09590fa00%3frik%3dgwyExpdFlIK85Q%26riu%3dhttp%253a%252f%252f2.bp.blogspot.com%252f-C0a-vDg8cfs%252fT6NjNmTxdkI%252fAAAAAAAABGQ%252fvXXueiiMLEo%252fs1600%252fAfrican%252bGorilla%252bAfrica%252bGorila%252bbeautiful%252bdangerous%252bBaby%252bsitting---Western-Lowland-Gorilla%252bdangerous%252banimal%252battacks%252bof%252bUganda%252bKenya%252bTanzania%252bSouth%252bAfrica%252banimal%252bpictures.jpg%26ehk%3doIpiRotcP0OOGZDb0CFwK3d7xpWOFKu2iedHWlAfWjE%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1200&expw=1600&q=gorila&FORM=IRPRST&ck=F75D392E3FF29F7D0ED92CFF33404257&selectedIndex=11&itb=0"
-    bot.send_photo(mensaje.chat.id, url_imagen, caption="¡Mira, un gorila!")
+    bot.send_photo(mensaje.chat.id, url_imagen, caption=image_caption)
 
 # ==========================================
 # 3. EL BOT LEE TUS IMÁGENES
